@@ -1,0 +1,15 @@
+---
+- hosts: jobtracker
+  tasks:
+    - package:   
+        name: "hadoop" 
+        state: present
+    - package:   
+        name: "jdk" 
+        state: present
+    - copy:
+        src: "/webcontent/temp/mapred-site.xml"
+        dest: "/etc/hadoop/mapred-site.xml"
+    - copy:
+        src: "/webcontent/temp/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"

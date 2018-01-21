@@ -1,0 +1,10 @@
+Apache Hadoop is an open software project to enable data-intensive computing on larger clusters. It includes a distributed file system(HDFS), programming support for MapReduce and infrastructure software for grid computing.
+
+
+
+We have designed a high-performance setup on Hadoop multinode cluster in one click. We have implemented manual setup Hadoop cluster and on-demand setup of Hadoop cluster(using containerized docker). The scripting has been done using PYTHON-CGI and ANSIBLE that includes dozens of modules to support a wide variety of software and application.
+
+
+
+We have analysed the sample data set of employees of each city having the data of their salary, job title, department. Our goal is to analyze the data of each city so that we can predict the new business and job opportunities in each and every city. Our goal is to improve employment and business opportunity in our country.
+

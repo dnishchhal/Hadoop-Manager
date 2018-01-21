@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+
+	<meta charset="UTF-8">
+	<title>Docker | Hadoop</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+<body>
+	<div class="container ">
+	    <form action="" >
+
+	    <div class="form-group">
+		<label for="exampleInputEmail1">Choose your Linux Flavour :</label>
+		     <select  id="imagename" >
+		    	<option value="centos">Centos</option>
+		    	<option value="fedora">Fedora</option>
+		    	<option value="ubuntu">Ubuntu</option>
+		    </select>
+	    </div> 
+
+		  <div class="form-group">
+			<label for="exampleInputEmail1">Master Nodes :</label>
+			<input  type="text" class="form-control" value="1" id="exampleInputEmail1" readonly >
+		  </div> 
+	  	  <div class="form-group">
+		 <label for="exampleInputEmail1">Slave Nodes :</label>
+		 <input  type="text" class="form-control" id="slavenumber" placeholder="no  of slave" >
+	  	</div> 
+	  		<input type="button" class="btn btn-primary" onclick="myfunction()" value="Submit" />
+	 
+    		</form>
+         
+	 	<form action="scripts/dockerlaunch.py" id="output" >
+	
+	 
+    		</form>
+
+	</div>
+	
+
+	<script src="assets/js/jquery.min.js" > </script>
+  	
+   	<script src="assets/js/bootstrap.min.js" > </script>
+
+	<script src="assets/js/docker.js"></script>
+ 
+</body>
+</html>

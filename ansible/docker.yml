@@ -1,0 +1,16 @@
+---
+- hosts: self
+  tasks:
+     - docker_container:
+           name: "containerName"
+           image: "ImageName"
+           state: "started"
+           interactive: "true"
+           tty: "true"
+           hostname: "giveName"
+           privileged: "true"
+
+              
+              
+           
+    

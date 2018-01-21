@@ -1,0 +1,28 @@
+---
+- hosts: mastercentos
+  tasks:
+    - name : hadoop software
+      package:   
+               name: "hadoop" 
+               state: present
+    - name : jdk software
+      package:   
+                name: "jdk" 
+                state: present
+    - name : copying hdfs
+      copy:
+             src: "/webcontent/files/dockermaster/hdfs-site.xml"
+             dest: "/etc/hadoop/hdfs-site.xml"
+
+    - name : copying core
+      copy:
+             src: "/webcontent/files/dockermaster/core-site.xml"
+             dest: "/etc/hadoop/core-site.xml"
+    - name : copying mapred
+      copy:
+             src: "/webcontent/files/dockermaster/mapred-site.xml"
+             dest: "/etc/hadoop/mapred-site.xml"
+              
+              
+           
+    

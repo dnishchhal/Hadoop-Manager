@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DockerShell</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+<body>
+	<div class="container-fluid ">
+    
+    <form action="scripts/dockershell.py">
+	  <div class="form-group">
+		<label for="exampleInputEmail1">Enter the container name :</label>
+		<input  type="text" class="form-control" placeholder="container name" id="exampleInputEmail1"  name="containername">
+	  </div>
+      <textarea class="ta" id="" cols="180" rows="200" name='code'></textarea>
+         
+     <input type="submit" class="btn btn-primary" value="Run" >		
+    	
+    </form>
+ 
+
+	</div>
+	<script src="assets/js/jquery.min.js" > </script>
+  	
+   	<script src="assets/js/bootstrap.min.js" > </script>
+ 
+</body>
+</html>

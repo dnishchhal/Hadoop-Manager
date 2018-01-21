@@ -1,0 +1,7 @@
+
+
+[slave1]
+192.168.1.36 ansible_ssh_user=root ansible_ssh_pass=redhat
+
+[jobtracker]
+192.168.1.37 ansible_ssh_user=root ansible_ssh_pass=redhat 

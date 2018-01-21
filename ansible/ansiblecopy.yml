@@ -1,0 +1,10 @@
+---
+- hosts: web
+  tasks:
+     - copy:
+           src: /etc/hadoop/hdfs-site.xml
+           dest: /etc/hadoop/
+           
+     - copy:
+            src: /etc/hadoop/core-site.xml    
+            dest: /etc/hadoop

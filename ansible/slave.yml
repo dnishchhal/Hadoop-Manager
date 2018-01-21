@@ -1,0 +1,15 @@
+---
+- hosts: SLAVE
+  tasks:
+    - package:   
+        name: "hadoop" 
+        state: present
+    - package:   
+        name: "jdk" 
+        state: present
+    - copy:
+        src: "/webcontent/temp/hdfs-site.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+    - copy:
+        src: "/webcontent/temp/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"

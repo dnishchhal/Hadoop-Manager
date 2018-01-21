@@ -1,0 +1,2 @@
+hadoop jar /usr/share/hadoop/contrib/streaming/hadoop-streaming-1.2.1.jar -input /hello.txt -mapper ./map.py -file map.py -reducer ./reducer.py -file reducer.py -output /out
+

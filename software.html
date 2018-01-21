@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Software</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+   
+    <div class="container-fluid">
+    	<form action='scripts/software.py'>
+    	<h1>Install any software anywhere</h1>
+	  <div class="form-group">
+		<label for="exampleInputEmail1">IP-Address :</label>
+		<input required pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$" type="text" class="form-control" id="exampleInputEmail1" placeholder="xxx.xxx.xxx.xxx" name='ip' >
+	  </div>
+	   <div class="form-group">
+		<label for="exampleInputEmail1">Software-Name :</label>
+		<input  type="text" class="form-control" id="exampleInputEmail1" placeholder="software name" name='name'>
+	  </div>
+	   <input type="submit" value="Install" class="btn btn-primary">
+	</form>
+    </div>
+
+	<script src="assets/js/jquery.min.js" > </script>
+  	
+   	<script src="assets/js/bootstrap.min.js" > </script>
+   	
+</body>
+</html>

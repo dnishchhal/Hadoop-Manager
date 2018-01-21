@@ -1,0 +1,28 @@
+---
+- hosts: all
+  tasks:
+    - package:
+        name: "hadoop"
+        state: present
+    - package:
+        name: "jdk"
+        state: present
+    - copy:
+        src: "../files/hdfs-site.xml"
+        dest: "/etc/hadoop/hdfs-site.xml"
+
+    - copy:
+        src: "../temp/core-site.xml"
+        dest: "/etc/hadoop/core-site.xml"
+
+    - copy:
+        src: "../temp/mapred-site.xml"
+        dest: "/etc/hadoop/mapred-site.xml"
+
+    - command: echo Y | hadoop namenode -format
+
+    - command: hadoop-daemon.sh start namenode
+
+    - command: hadoop-daemon.sh start jobtracker
+
+    - command: hadoop dfsadmin -safemode leave

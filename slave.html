@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slave</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+</head>
+<body>
+		<div class="container">
+
+	    <form action="">
+    	
+    	<div class="form-group">
+		<label for="exampleInputEmail1">Slave Nodes :</label>
+		<input  type="text" class="form-control" id="slavenumber" placeholder="Slave Node"  >
+     	<br>
+     	<input type="button" class="btn btn-primary" onclick="myfunction()" value="Submit" />
+	    </div>  
+    </form>
+	   <form action="scripts/hdfsdata.py"  id="output">
+       </form>
+	</div>
+      
+	<script src="assets/js/jquery.min.js" > </script>
+	  	
+   	<script src="assets/js/bootstrap.min.js" > </script>
+ 		
+        <script src="assets/js/slave.js"></script> 
+ 	
+ 	
+</body>
+</html>

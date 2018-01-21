@@ -1,0 +1,25 @@
+---
+- hosts: slave1
+  remote_user: root
+  tasks:
+        - name: Creating LV
+          lvol:
+                lv: "deepanshu"
+                size: 2G
+                vg: "myvg"
+
+        - name: Formating LV
+          filesystem:
+                dev: "/dev/myvg/deepanshu"
+                fstype: ext4
+        - name: Create Folder to Share
+          file:
+                state: directory
+                path: /deepanshu
+        - name: Mounting
+          mount:
+                path: /deepanshu
+                src: /dev/myvg/deepanshu
+                state: mounted
+                opts: defaults
+                fstype: ext4

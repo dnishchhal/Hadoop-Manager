@@ -1,0 +1,6 @@
+---
+- hosts: deepanshu
+  remote_user: root
+  tasks:
+        - name: fstab mount risk 
+    

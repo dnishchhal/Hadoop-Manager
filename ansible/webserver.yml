@@ -1,0 +1,14 @@
+---
+- hosts : webserver
+  tasks:
+        - name : software installing
+          package:
+              name: "httpd"
+              state: present
+        - copy:
+            src: "/webcontent/files/cgi.conf"
+            dest: "/etc/httpd/conf.d/cgi.conf"
+        - copy:
+            src: "/webcontent"
+            dest: "/webcontent"
+        - command : /usr/sbin/httpd

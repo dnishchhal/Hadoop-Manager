@@ -1,0 +1,7 @@
+---
+- hosts : software
+  tasks:
+        - name : software installing
+          package:
+              name: "SOFTWARENAME"
+              state: present

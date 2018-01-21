@@ -1,0 +1,25 @@
+---
+- hosts: LVHOST
+  remote_user: root
+  tasks:
+        - name: Creating LV
+          lvol:
+                lv: "lvName"
+                size: lvSizeG
+                vg: "myvg"
+
+        - name: Formating LV
+          filesystem:
+                dev: "/dev/myvg/lvName"
+                fstype: ext4
+        - name: Create Folder to Share
+          file:
+                state: directory
+                path: /lvName
+        - name: Mounting
+          mount:
+                path: /lvName
+                src: /dev/myvg/lvName
+                state: mounted
+                opts: defaults
+                fstype: ext4
